@@ -12,5 +12,12 @@ public class CustomQueue {
     public int dequeue() {
         return (int) collection.delete(0);
     }
+
+    @Override
+    public String toString() {
+        return "CustomQueue{" +
+                "collection=" + collection +
+                '}';
+    }
 }
 
