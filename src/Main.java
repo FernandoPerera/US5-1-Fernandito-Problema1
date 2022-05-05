@@ -1,5 +1,4 @@
 import com.nandosoft.utils.CustomQueue;
-import com.nandosoft.utils.CustomStack;
 
 import java.util.Scanner;
 
@@ -9,7 +8,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        CustomStack pila = new CustomStack();
+        CustomQueue pila = new CustomQueue();
 
         int contador = 0;
         int resultado = 0;
@@ -23,7 +22,7 @@ public class Main {
 
             int numero = scanner.nextInt();
             scanner.nextLine();
-            pila.push(numero);
+            pila.enqueue(numero);
 
             System.out.println("Si desea dejar de introducir números pulse la letra Q sino pulse enter");
             String Q = scanner.nextLine();
@@ -37,7 +36,7 @@ public class Main {
 
         for (int i = 0; i < contador; i++) {
 
-             mostrar = pila.pop();
+             mostrar = pila.dequeue();
 
             System.out.print((mostrar) + " | ");
             resultado += mostrar;
